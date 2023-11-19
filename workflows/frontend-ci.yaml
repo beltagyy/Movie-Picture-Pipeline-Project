@@ -78,7 +78,7 @@ jobs:
     - name: Setup nodejs
       uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 18.14.2
 
     - name: Cache dependencies
       id: cache
