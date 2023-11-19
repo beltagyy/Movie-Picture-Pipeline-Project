@@ -36,7 +36,7 @@ jobs:
       run: cd ./starter/frontend && npm install
 
     - name: Install prettier
-      run: "cd ./starter/frontend \nnpm install prettier@3.1.0 --save-dev"
+      run: "cd ./starter/frontend \nnpm install prettier@4.2.1 --save-dev"
     - name: Run lint check
       run: cd ./starter/frontend && npm run lint
 
@@ -88,7 +88,7 @@ jobs:
         key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
 
     - name: Install prettier
-      run: "cd ./starter/frontend \nnpm install prettier@3.1.0 --save-dev"
+      run: "cd ./starter/frontend \nnpm install prettier@4.2.1 --save-dev"
     - name: Install dependencies
       run: cd ./starter/frontend && npm install
 
