@@ -75,7 +75,8 @@ jobs:
       
       - name: Deploy to Kubernetes
         run: |
+          DEPLOYMENT_NAME='my-frontend-app'
           cd ./starter/frontend/k8s
           kustomize edit set image frontend=009915178603.dkr.ecr.us-east-1.amazonaws.com/frontend:release-${GITHUB_SHA::7}
           kustomize build | kubectl apply -f -
-          kubectl rollout status deployment
+          kubectl rollout status deployment/$DEPLOYMENT_NAME
