@@ -80,4 +80,3 @@ jobs:
           cd ./starter/backend/k8s
           kustomize edit set image backend=009915178603.dkr.ecr.us-east-1.amazonaws.com/backend:release-${GITHUB_SHA::7}
           kustomize build | kubectl apply -f -
-          kubectl rollout status deployment/$DEPLOYMENT_NAME
